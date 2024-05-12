@@ -1,0 +1,98 @@
+{
+  "project_info": {
+    "project_number": "30300999499",
+    "firebase_url": "https://musicapplication-d6779-default-rtdb.firebaseio.com",
+    "project_id": "musicapplication-d6779",
+    "storage_bucket": "musicapplication-d6779.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:30300999499:android:4ba253b7d87522493c62ce",
+        "android_client_info": {
+          "package_name": "com.example.musicapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "30300999499-8blruocsu74go4tdqj6k4151qdgeag1m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAWpqCpgSDHWPcnxxlKw5PMqjzg96mJJl8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "30300999499-8blruocsu74go4tdqj6k4151qdgeag1m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:30300999499:android:b814940ff46b8d3d3c62ce",
+        "android_client_info": {
+          "package_name": "com.example.musicapplication_zingmp3"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "30300999499-8blruocsu74go4tdqj6k4151qdgeag1m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAWpqCpgSDHWPcnxxlKw5PMqjzg96mJJl8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "30300999499-8blruocsu74go4tdqj6k4151qdgeag1m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:30300999499:android:4df564c213d6757f3c62ce",
+        "android_client_info": {
+          "package_name": "com.example.musicapplicationz"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "30300999499-8blruocsu74go4tdqj6k4151qdgeag1m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAWpqCpgSDHWPcnxxlKw5PMqjzg96mJJl8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "30300999499-8blruocsu74go4tdqj6k4151qdgeag1m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
