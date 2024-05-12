@@ -12,6 +12,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MusicapplicationZ"
         tools:targetApi="31">
+        <meta-data
+            android:name="com.google.android.actions"
+            android:resource="@xml/login_image_logo" />
+
         <activity
             android:name=".Activity.MainActivity"
             android:exported="true">
