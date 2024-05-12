@@ -48,5 +48,18 @@ dependencies {
     // TODO: Add the dependencies for Firebase products you want to use
     // When using the BoM, don't specify versions in Firebase dependencies
     implementation("com.google.firebase:firebase-analytics")
+    implementation("com.google.firebase:firebase-auth")
+    implementation ("com.google.firebase:firebase-firestore")
+
+
+    //Glide
+    implementation ("com.github.bumptech.glide:glide:4.12.0")
+    annotationProcessor("com.github.bumptech.glide:compiler:4.12.0")
+
+    //ImageSlider
+    implementation("com.github.denzcoskun:ImageSlideshow:0.1.2")
+
+    implementation ("de.hdodenhof:circleimageview:3.1.0")
+    implementation ("com.sothree.slidinguppanel:library:3.4.0")
 
 }

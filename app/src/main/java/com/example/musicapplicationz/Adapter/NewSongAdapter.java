@@ -1,4 +1,4 @@
-package com.example.musicapplicationz.Activity.Adapter;
+package com.example.musicapplicationz.Adapter;
 
 import android.content.Context;
 import android.content.Intent;
@@ -7,8 +7,6 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -17,7 +15,6 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
-import com.example.musicapplicationz.Activity.MainActivity;
 import com.example.musicapplicationz.Model.MediaPlayerSingleton;
 import com.example.musicapplicationz.Model.Song;
 import com.example.musicapplicationz.R;

@@ -1,4 +1,4 @@
-package com.example.musicapplicationz.Activity.Adapter;
+package com.example.musicapplicationz.Adapter;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -15,66 +15,77 @@ import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.example.musicapplicationz.Fragment.Album.AlbumSongsFragment;
 import com.example.musicapplicationz.Fragment.Singer.SingerTabFragment;
+import com.example.musicapplicationz.Model.Album;
 import com.example.musicapplicationz.Model.Singer;
 import com.example.musicapplicationz.R;
 
-
 import java.util.ArrayList;
 
-public class SingerAdapter extends RecyclerView.Adapter<SingerAdapter.ViewHolder> {
-    ArrayList<Singer> singers;
+public class AlbumAdapter extends RecyclerView.Adapter<AlbumAdapter.ViewHolder>{
+    ArrayList<Album> albums;
     Context context;
 
-    public SingerAdapter(ArrayList<Singer> singers, Context context) {
-        this.singers = singers;
+    Singer singer;
+
+    public AlbumAdapter(ArrayList<Album> albums, Singer singer, Context context) {
+        this.albums = albums;
         this.context = context;
+        this.singer = singer;
     }
 
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        LayoutInflater inflater = LayoutInflater.from(parent.getContext());
-        View itemView = inflater.inflate(R.layout.fragment_singer_item,parent,false);
+        LayoutInflater inflater=LayoutInflater.from(parent.getContext());
+        View itemView = inflater.inflate(R.layout.album_item,parent,false);
         return new ViewHolder(itemView);
     }
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, @SuppressLint("RecyclerView") int position) {
-        final Singer singer = singers.get(position);
-        holder.txtSingerName.setText(singer.getName().trim());
+        final Album album = albums.get(position);
+        holder.txtAlbumTitle.setText(album.getTitle().trim());
+        holder.txtSingerName.setText(album.getSinger().trim());
         Glide.with(context)
-                .load(singer.getImage().trim())
-                .circleCrop()
-                .into(holder.imgSinger);
+                .load(album.getImage().trim())
+                .into(holder.imageViewAlbum);
+
         holder.itemView.setOnClickListener(v -> {
             Bundle bundle = new Bundle();
-            bundle.putParcelable("singer", singer);
-            SingerTabFragment singerTabFragment = new SingerTabFragment();
-            singerTabFragment.setArguments(bundle);
+            bundle.putParcelable("album", album);
+            if(singer != null){
+                bundle.putParcelable("singer", singer);
+            }
+
+            AlbumSongsFragment albumSongsFragment = new AlbumSongsFragment();
+            albumSongsFragment.setArguments(bundle);
 
             FragmentTransaction fragmentTransaction = ((AppCompatActivity)context)
                     .getSupportFragmentManager()
                     .beginTransaction();
-            fragmentTransaction.replace(R.id.fragmentLayout, singerTabFragment);
+            fragmentTransaction.replace(R.id.fragmentLayout, albumSongsFragment);
             fragmentTransaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
             fragmentTransaction.addToBackStack(null);
             fragmentTransaction.commit();
         });
+
     }
 
     @Override
     public int getItemCount() {
-        return singers.size();
+        return albums.size();
     }
+
     public class ViewHolder extends RecyclerView.ViewHolder{
-        ImageView imgSinger;
-        TextView txtSingerName;
+        ImageView imageViewAlbum;
+        TextView txtAlbumTitle,txtSingerName;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            imgSinger = itemView.findViewById(R.id.imageViewSinger);
+            imageViewAlbum = itemView.findViewById(R.id.imageViewAlbum);
+            txtAlbumTitle = itemView.findViewById(R.id.txtAlbumTitle);
             txtSingerName = itemView.findViewById(R.id.txtSingerName);
         }
     }
-}

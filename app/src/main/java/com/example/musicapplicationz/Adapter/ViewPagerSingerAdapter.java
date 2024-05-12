@@ -1,4 +1,4 @@
-package com.example.musicapplicationz.Activity.Adapter;
+package com.example.musicapplicationz.Adapter;
 
 import android.os.Bundle;
 
