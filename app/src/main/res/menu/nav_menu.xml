@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn = "navigation_view">
+
+    <group
+        android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/navHome"
+            android:icon="@drawable/nav_menu_home"
+            android:title="Home"/>
+
+        <item
+            android:id="@+id/navNewSong"
+            android:icon="@drawable/nav_menu_new_song"
+            android:title="New Song"/>
+
+        <item
+            android:id="@+id/navAlbums"
+            android:icon="@drawable/nav_menu_album"
+            android:title="Albums"/>
+
+        <item
+            android:id="@+id/navArtist"
+            android:icon="@drawable/nav_menu_artist"
+            android:title="Artist"/>
+
+        <item
+            android:id="@+id/navPersonalMusic"
+            android:icon="@drawable/nav_menu_personal_music"
+            android:title="Personal music"/>
+    </group>
+    <item android:title="">
+        <menu>
+            <item
+                android:id="@+id/navLogout"
+                android:icon="@drawable/nav_menu_logout"
+                android:title="Logout"/>
+        </menu>
+    </item>
+
+</menu>
